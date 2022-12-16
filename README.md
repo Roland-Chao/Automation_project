@@ -1,15 +1,18 @@
 # Roland's AUTOMATION PROJECT
 
-## [安裝相關說明]
-    pip install -r requirements.txt
+## 安裝相關說明
 
-## [運行指令]
+    $ pip install -r requirements.txt
+
+## 運行指令
+    
     //執行 shell 檔 (預設為五個 worker)
-    sh script.sh ${要執行的測項}
+    $ sh script.sh ${要執行的測項}
 
-    ex: sh script.sh test_XXX
+    ex: $ sh script.sh test_XXX 
 
-## [專案結構說明]
+## 專案結構說明
+```
     └── Automation_project
     │   │
     │   ├── allure_report // 放置測試報告
@@ -45,25 +48,26 @@
     │   ├── pytest.ini // 設定 pytest 參數
     │   ├── requirements.txt // 套件管理檔
     └── └── .env // 管理環境參數(Domain、登入帳號)
+```
+## 驗證項目 
+    ** UI: 驗證購物網站的UI流程 **
+        1. 登入
+        2. 搜尋商品
+        3. 搜尋商品
+        4. 加入購物車
+        5. 結帳
+        6. 後台商品管理
 
-## [驗證項目]
-    UI: 驗證購物網站的UI流程
-        1.登入
-        2.搜尋商品
-        3.搜尋商品
-        4.加入購物車
-        5.結帳
-        6.後台商品管理
+    ** API: 驗證購物網站API的正確、錯誤情境 **
+        1. 登入
+        2. 搜尋商品
+        3. 搜尋商品
+        4. 加入購物車
+        5. 結帳
+        6. 後台商品管理
 
-    API: 驗證購物網站API的正確、錯誤情境
-        1.登入
-        2.搜尋商品
-        3.搜尋商品
-        4.加入購物車
-        5.結帳
-        6.後台商品管理
+## .env 參數設定
 
-## [.env 參數設定]
     DB_CONNECTION = '{
         "host": "*******",
         "database": "*******",
