@@ -1,4 +1,4 @@
-# Week 9 Part 2 (Deadline: 2022/12/18 23:59)
+# Roland's AUTOMATION PROJECT
 
 ## [安裝相關說明]
     pip install -r requirements.txt
