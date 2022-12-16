@@ -1,0 +1,13 @@
+INFO     mysql.connector.authentication:authentication.py:59 package: mysql.connector.plugins
+INFO     mysql.connector.authentication:authentication.py:60 plugin_name: caching_sha2_password
+INFO     mysql.connector.authentication:authentication.py:62 AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO     root:api_utils.py:17 Request method: post
+INFO     root:api_utils.py:18 Request URL: http://54.201.140.239/api/1.0/user/login
+INFO     root:api_utils.py:21 Request Json body: {
+    "provider": "native",
+    "email": "roland_test1@hotmail.com",
+    "password": "123456"
+}
+INFO     root:api_utils.py:22 Request params: {}
+INFO     root:api_utils.py:25 Response headers: {'Server': 'nginx/1.20.1', 'Date': 'Fri, 16 Dec 2022 16:32:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '496', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"1f0-Z+Z1jRMCTYBp8JauHujT93bEna0"'}
+INFO     root:api_utils.py:26 Response code: 200

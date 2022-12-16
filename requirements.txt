@@ -9,3 +9,4 @@ requests
 mysql-connector-python
 selenium
 allure-pytest
+webdriver_manager
