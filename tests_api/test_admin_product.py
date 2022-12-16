@@ -1,9 +1,9 @@
 import pytest, allure, json, os, requests
 from api_objects.login_api import LoginAPI
 from page_objects.database_utils import DatabaseUtils
-from api_objects.admin_pruduct_api import AdminProductAPI
+from api_objects.admin_product_api import AdminProductAPI
 from test_data.get_data_from_excel import GetDataFromExcel
-from api_objects.admin_delete_pruduct_api import DeleteAdminProductAPI
+from api_objects.admin_delete_product_api import DeleteAdminProductAPI
 
 class TestAdminProductAPI:
     path = os.path.abspath("test_data/Stylish-Test Case.xlsx")
@@ -36,18 +36,18 @@ class TestAdminProductAPI:
             login.set_login_token_to_session(login_info)
             
         with allure.step("create request payload"):
-            from_data = Admin_product.set_from_data(test_data)
+            form_data = Admin_product.set_form_data(test_data)
             from_file = Admin_product.set_from_file(test_data)
         
         try:
             with allure.step("send Admin product request"):
-                response = Admin_product.send_request(data=from_data, files=from_file)
+                response = Admin_product.send_request(data=form_data, files=from_file)
                 
             with allure.step("assert status_code = 400"):
                 assert response.status_code == 400, f'{response.status_code}'
             
             with allure.step(f'assert errorMsg = {test_data["Error Msg"]}'):
-                assert response.json()["errorMsg"] == test_data["Error Msg"], f'{from_data}'
+                assert response.json()["errorMsg"] == test_data["Error Msg"], f'{form_data}'
                 
         except AssertionError:
             with allure.step(f'delete prduct'):

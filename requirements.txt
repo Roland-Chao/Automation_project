@@ -7,6 +7,5 @@ pytest-xdist
 pytest-rerunfailures
 requests
 mysql-connector-python
-mysql
 selenium
 allure-pytest

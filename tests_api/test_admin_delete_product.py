@@ -1,9 +1,9 @@
 import pytest, allure, json, os, requests
 from api_objects.login_api import LoginAPI
 from page_objects.database_utils import DatabaseUtils
-from api_objects.admin_pruduct_api import AdminProductAPI
+from api_objects.admin_product_api import AdminProductAPI
 from test_data.get_data_from_excel import GetDataFromExcel
-from api_objects.admin_delete_pruduct_api import DeleteAdminProductAPI
+from api_objects.admin_delete_product_api import DeleteAdminProductAPI
 
 class TestDeleteAdminProductAPI:
     path = os.path.abspath("test_data/Stylish-Test Case.xlsx")

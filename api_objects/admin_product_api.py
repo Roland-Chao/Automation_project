@@ -7,7 +7,7 @@ class AdminProductAPI(APIUtils):
         super().__init__(session)
         self.session = session
         self.url = f'{os.getenv("DOMAIN")}/api/1.0/admin/product'
-        self.from_data =  {
+        self.form_data =  {
             'category': '',
             'title' : '',
             'description' : '',
@@ -48,9 +48,9 @@ class AdminProductAPI(APIUtils):
             
         return self.request_files
     
-    def set_from_data(self, data):
-        self.request_data = self.from_data.copy()
-        # 組成 from_data
+    def set_form_data(self, data):
+        self.request_data = self.form_data.copy()
+        # 組成 form_data
         self.request_data["category"] = data["Category"]
         self.request_data["title"] = data["Title"]
         self.request_data["description"] = data["Description"]

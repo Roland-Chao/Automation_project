@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 from page_objects.action_utils import ActionUtils
-from dotenv import load_dotenv
 import json, os
 
 class LoginPage(ActionUtils):
@@ -22,7 +21,6 @@ class LoginPage(ActionUtils):
         self.find_element(self.logout_btn).click()
         
     def get_parallel_login_account(self, worker_id):
-        load_dotenv()
         if worker_id == 'master' or worker_id == 'gw0':
             info = json.loads(os.getenv("ACCOUNT_1"))
         elif worker_id == 'gw1':

@@ -5,7 +5,7 @@ from page_objects.action_utils import ActionUtils
 
 class PrimePage(ActionUtils):
     
-    page_url = f'http://54.201.140.239/get_prime.html'
+    page_url = f'{os.getenv("DOMAIN")}/get_prime.html'
     # 信用卡欄位 - 信用卡號
     card_number_iframe = (By.XPATH, '//*[@id="card-number"]/iframe')
     card_number = (By.ID, "cc-number")
